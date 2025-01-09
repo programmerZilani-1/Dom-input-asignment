@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>DOM Element Design Project</title>
+  </head>
+  <body>
+    <div id="app" class="container mt-5">
+      <div class="row">
+        <div class="col-md-3 border">
+          <div class="header-section-input">
+            <!-- heading -->
+            <h5 class="card-title">Text</h5>
+            <input
+              id="header-input"
+              class="form-control mb-3"
+              type="text"
+              placeholder="Type your heading"
+            />
+            <!-- heading -->
+            <!-- font size -->
+            <h6 class="card-title mt-3">Font Size</h6>
+            <input
+              id="header-range"
+              type="range"
+              min="20"
+              max="200"
+              value="50"
+              style="width: 230px"
+            />
+            <span>50px</span>
+            <!-- Font Color -->
+            <h6 class="card-title mt-3">Font Color</h6>
+            <input
+              type="color"
+              class="form-control"
+              id="font-color"
+              value="#000000"
+            />
+
+            <!-- Text Alignment -->
+            <h6 class="card-title mt-3">Text Alignment</h6>
+            <select
+              id="text-align"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>Left</option>
+              <option value="center">Center</option>
+              <option value="right">Right</option>
+            </select>
+            <!-- TDC -->
+            <h6 class="card-title mt-3">Text Decoration</h6>
+            <select
+              id="text-decorate"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>None</option>
+              <option value="underline">Underline</option>
+              <option value="overline">Overline</option>
+              <option value="underline overline">Underline Overline</option>
+              <option value="line-through">Line Through</option>
+            </select>
+
+            <!-- Font Family -->
+            <h6 class="card-title mt-3">Font Family</h6>
+            <select class="form-select" id="font-family">
+              <option value="serif">Serif</option>
+              <option value="sans-serif">Sans Serif</option>
+              <option value="cursive">Cursive</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="system-ui">System UI</option>
+              <option value="monospace">Monospace</option>
+            </select>
+
+            <!-- Font Weight -->
+            <h6 class="card-title mt-3">Font Weight</h6>
+            <select class="form-select" id="font-weight">
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+              <option selected>400</option>
+              <option value="500">500</option>
+              <option value="600">600</option>
+              <option value="700">700</option>
+              <option value="800">800</option>
+              <option value="900">900</option>
+            </select>
+
+            <!-- font style -->
+            <h6 class="card-title mt-3">Font Style</h6>
+            <select class="form-select" id="font-style">
+              <option value="normal">Normal</option>
+              <option value="italic">Italic</option>
+              <option value="oblique">Oblique</option>
+            </select>
+          </div>
+
+          <!-- image section input -->
+          <div class="image-section-input">
+            <h5 class="card-title mt-4">Image</h5>
+            <input
+              type="text"
+              class="form-control mb-2"
+              placeholder="input your image link"
+              id="image-input-link"
+            />
+            <input
+              class="form-control"
+              type="file"
+              name="file"
+              id="image-input-file"
+            />
+
+            <!-- image size -->
+            <h6 class="card-title mt-3">Image Size</h6>
+            <input
+              id="image-range"
+              type="range"
+              min="100"
+              max="1000"
+              value="300"
+              style="width: 230px"
+            />
+            <span>300px</span>
+          </div>
+        </div>
+
+        <div class="col-md-9 border border-success">
+          <!-- header output -->
+          <div class="header-section-output container">
+            <h1 class="mt-5" id="header-output"></h1>
+          </div>
+
+          <!-- image output -->
+          <div class="image-section-output container">
+            <img class="img-fluid" src="#" alt="" id="image-output" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./func.js"></script>
+  </body>
+</html>
